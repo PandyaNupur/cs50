@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let counter=0
+        function count() {
+            counter++
+            document.querySelector('h2').innerHTML=counter;
+            // counter++;
+            // alert(counter)
+            if (counter%10 === 0 ) {
+                alert(`count is now ${counter}`)
+            }
+        }
+        function hello() {
+            if(document.querySelector('h1').innerHTML=="hiii")
+            document.querySelector('h1').innerHTML="hello"
+            else{
+                document.querySelector('h1').innerHTML="hiii"
+            }
+        }
+        document.addEventListener('DOMContentLoaded',function(){
+
+            // document.querySelector('button').onclick=count;
+            // document.querySelector('button').addEventListener('click',count)
+            document.querySelector('form').onsubmit=function () {
+                let a=document.querySelector('#name').value;
+                alert(a);
+            };
+            // two different ways
+        })
+    </script>
+</head>
+<body>
+    <!-- <h1>hiii</h1> -->
+    <!-- <h2>0</h2> -->
+    <!-- <button onclick="hello()">Change h1</button> -->
+    <!-- <button>Count</button> -->
+    <form action="">
+        <input type="text" autofocus id="name" placeholder="Name">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
